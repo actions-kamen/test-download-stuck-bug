@@ -32,8 +32,6 @@ jobs:
         with:
           path: /tmp/datacache
           key: key1
-        env:
-          SEGMENT_DOWNLOAD_TIMEOUT_MINS: 15
       - if: steps.cache.outputs.cache-hit != 'true'
         run: |
           rm -rf /tmp/datacache
